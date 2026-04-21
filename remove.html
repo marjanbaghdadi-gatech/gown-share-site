@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Listing Removal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="form-container">
+    <h1>Request Listing Removal</h1>
+    <p class="subtitle">
+      Send a request to remove your gown listing. We will review it and remove it manually.
+    </p>
+
+    <form id="removeForm">
+      <div>
+        <label for="remove_name">Name</label>
+        <input type="text" id="remove_name" name="remove_name" required />
+      </div>
+
+      <div>
+        <label for="remove_email">Email</label>
+        <input type="email" id="remove_email" name="remove_email" required />
+      </div>
+
+      <div>
+        <label for="remove_degree_level">Degree Level</label>
+        <select id="remove_degree_level" name="remove_degree_level" required>
+          <option value="">Select one</option>
+          <option value="Bachelor's">Bachelor's</option>
+          <option value="Master's">Master's</option>
+          <option value="PhD">PhD</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="remove_message">Optional Note</label>
+        <textarea
+          id="remove_message"
+          name="remove_message"
+          placeholder="Anything that helps identify your listing"
+        ></textarea>
+      </div>
+
+      <button type="submit">Send Removal Request</button>
+    </form>
+
+    <div id="removeMessage" class="message"></div>
+
+    <a class="back-link" href="index.html">← Back to Home</a>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
