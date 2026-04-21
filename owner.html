@@ -1,1 +1,77 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offer a Gown</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="form-container">
+    <h1>Offer a Gown</h1>
+    <p class="subtitle">Fill out your gown information below.</p>
+
+    <form id="ownerForm">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div>
+        <label for="degree_level">Degree Level</label>
+        <select id="degree_level" name="degree_level" required>
+          <option value="">Select one</option>
+          <option value="Bachelor's">Bachelor's</option>
+          <option value="Master's">Master's</option>
+          <option value="PhD">PhD</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="size_range_label">Size Range</label>
+        <select id="size_range_label" name="size_range_label" required>
+          <option value="">Select one</option>
+          <option value="Under 5'3&quot;">Under 5'3"</option>
+          <option value="5'3&quot;–5'5&quot;">5'3"–5'5"</option>
+          <option value="5'6&quot;–5'8&quot;">5'6"–5'8"</option>
+          <option value="5'9&quot;–6'0&quot;">5'9"–6'0"</option>
+          <option value="Over 6'0&quot;">Over 6'0"</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="hood_color">Hood Color</label>
+        <input type="text" id="hood_color" name="hood_color" />
+      </div>
+
+      <div>
+        <label for="fulfillment_method">Pickup or Shipping</label>
+        <select id="fulfillment_method" name="fulfillment_method" required>
+          <option value="">Select one</option>
+          <option value="Pickup">Pickup</option>
+          <option value="Shipping">Shipping</option>
+          <option value="Either">Either</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="ownerMessage" class="message"></div>
+
+    <a class="back-link" href="index.html">← Back to Home</a>
+  </main>
+</body>
+</html>
