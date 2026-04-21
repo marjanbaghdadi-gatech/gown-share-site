@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const OWNER_WEBHOOK_URL = "https://mbaghdadi6g.app.n8n.cloud/webhook/gown-owner-submit";
   const SEARCH_WEBHOOK_URL = "https://mbaghdadi6g.app.n8n.cloud/webhook/gown-search";
+  const REMOVE_WEBHOOK_URL = "PASTE-YOUR-REMOVE-WEBHOOK-URL-HERE";
 
   const ownerForm = document.getElementById("ownerForm");
   const borrowerForm = document.getElementById("borrowerForm");
+  const removeForm = document.getElementById("removeForm");
 
   if (ownerForm) {
     ownerForm.addEventListener("submit", async (e) => {
@@ -106,6 +108,43 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       } catch (error) {
         borrowerMessage.textContent = "Could not complete the search. Please try again.";
+      }
+    });
+  }
+
+  if (removeForm) {
+    removeForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const removeMessage = document.getElementById("removeMessage");
+      removeMessage.textContent = "Sending request...";
+
+      const payload = {
+        name: document.getElementById("remove_name").value.trim(),
+        email: document.getElementById("remove_email").value.trim(),
+        degree_level: document.getElementById("remove_degree_level").value,
+        message: document.getElementById("remove_message").value.trim()
+      };
+
+      try {
+        const response = await fetch(REMOVE_WEBHOOK_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+
+        if (data.ok) {
+          removeMessage.textContent = data.message || "Your removal request was sent.";
+          removeForm.reset();
+        } else {
+          removeMessage.textContent = "Something went wrong. Please try again.";
+        }
+      } catch (error) {
+        removeMessage.textContent = "Could not send your request. Please try again.";
       }
     });
   }
