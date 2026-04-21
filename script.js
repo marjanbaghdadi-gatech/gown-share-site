@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const OWNER_WEBHOOK_URL = "https://mbaghdadi6g.app.n8n.cloud/webhook/gown-owner-submit";
   const SEARCH_WEBHOOK_URL = "https://mbaghdadi6g.app.n8n.cloud/webhook/gown-search";
-  const REMOVE_WEBHOOK_URL = "PASTE-YOUR-REMOVE-WEBHOOK-URL-HERE";
+  const REMOVE_WEBHOOK_URL = "https://mbaghdadi6g.app.n8n.cloud/webhook/gown-remove-request";
 
   const ownerForm = document.getElementById("ownerForm");
   const borrowerForm = document.getElementById("borrowerForm");
