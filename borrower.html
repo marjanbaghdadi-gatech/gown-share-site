@@ -1,1 +1,79 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find a Gown</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="results-container">
+    <h1>Find a Gown</h1>
+    <p class="subtitle">Enter your information to search for a matching gown.</p>
+
+    <form id="borrowerForm">
+      <div>
+        <label for="degree_level">Degree Level</label>
+        <select id="degree_level" name="degree_level" required>
+          <option value="">Select one</option>
+          <option value="Bachelor's">Bachelor's</option>
+          <option value="Master's">Master's</option>
+          <option value="PhD">PhD</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="height_feet">Height</label>
+        <div style="display: flex; gap: 12px;">
+          <select id="height_feet" name="height_feet" required>
+            <option value="">Feet</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select>
+
+          <select id="height_inches" name="height_inches" required>
+            <option value="">Inches</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="fulfillment_method">Pickup or Shipping</label>
+        <select id="fulfillment_method" name="fulfillment_method" required>
+          <option value="">Select one</option>
+          <option value="Pickup">Pickup</option>
+          <option value="Shipping">Shipping</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="ceremony_date">Ceremony Date (Optional)</label>
+        <input type="date" id="ceremony_date" name="ceremony_date" />
+      </div>
+
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="borrowerMessage" class="message"></div>
+    <div id="results"></div>
+
+    <a class="back-link" href="index.html">← Back to Home</a>
+  </main>
+</body>
+</html>
