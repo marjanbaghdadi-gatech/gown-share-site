@@ -68,6 +68,10 @@ button,
   box-sizing: border-box;
 }
 
+.remove-submit-button {
+  background: #374151;
+}
+
 form {
   display: flex;
   flex-direction: column;
