@@ -35,11 +35,11 @@ h1 {
 }
 
 .main-button,
-button {
+button,
+.remove-button {
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  background: #1d4ed8;
   color: white;
   padding: 14px 18px;
   border-radius: 12px;
@@ -48,8 +48,24 @@ button {
   cursor: pointer;
 }
 
+.main-button {
+  background: #1d4ed8;
+}
+
 .main-button.secondary {
   background: #0f172a;
+}
+
+.bottom-action {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.remove-button {
+  background: #6b7280;
+  max-width: 340px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 form {
