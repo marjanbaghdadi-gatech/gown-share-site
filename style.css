@@ -52,6 +52,14 @@ button,
   background: #1d4ed8;
 }
 
+button {
+  background: #1f2937;
+}
+
+.main-button.secondary {
+  background: #0f172a;
+}
+
 .main-button.secondary {
   background: #0f172a;
 }
