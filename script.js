@@ -118,7 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
         name: document.getElementById("remove_name").value.trim(),
         email: document.getElementById("remove_email").value.trim(),
         degree_level: document.getElementById("remove_degree_level").value,
-        message: document.getElementById("remove_message").value.trim()
       };
 
       try {
