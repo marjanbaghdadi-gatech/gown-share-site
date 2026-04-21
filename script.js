@@ -19,9 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         email: document.getElementById("email").value.trim(),
         degree_level: document.getElementById("degree_level").value,
         size_range_label: document.getElementById("size_range_label").value,
-        hood_color: document.getElementById("hood_color").value.trim(),
-        fulfillment_method: document.getElementById("fulfillment_method").value,
-        notes: document.getElementById("notes").value.trim()
+        hood_color: document.getElementById("hood_color").value.trim()
       };
 
       try {
@@ -61,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
         degree_level: document.getElementById("degree_level").value,
         height_feet: Number(document.getElementById("height_feet").value),
         height_inches: Number(document.getElementById("height_inches").value),
-        fulfillment_method: document.getElementById("fulfillment_method").value,
         ceremony_date: document.getElementById("ceremony_date").value
       };
 
@@ -100,8 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <p><strong>Degree Level:</strong> ${item.degree_level || ""}</p>
             <p><strong>Size Range:</strong> ${item.size_range_label || ""}</p>
             <p><strong>Hood Color:</strong> ${item.hood_color || ""}</p>
-            <p><strong>Pickup / Shipping:</strong> ${item.fulfillment_method || ""}</p>
-            <p><strong>Notes:</strong> ${item.notes || ""}</p>
           `;
 
           resultsContainer.appendChild(card);
